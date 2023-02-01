@@ -1,32 +1,41 @@
+# orange calorie and protein content. 
 orange_calorie = 0.47
 orange_protein = 0.009
 
+# chicken breast calorie and protein content
 chicken_breast_calorie = 1.65
 chicken_breast_protein = 0.31
 
+# chicken liver calorie and protein content
 chicken_liver_calorie = 1.67
 chicken_liver_protein = 0.24
 
-
+# sugar calorie and protein content
 sugar_calorie= 3.87 
-sugar_prortein = 0.00
+sugar_protein = 0.00
 
+# lentils calorie and protein content
 lentils_calorie = 3.44
 lentils_protein = 0.26
 
+# carrot  calorie and protein content 
 carrot_calorie = 0.41
 carrot_protein = 0.09
 
+# milk calorie and protein content 
 milk_calorie = 0.67
 milk_protein = 0.033
 
+# potato calorie and protein content
 potato_calorie = 0.77
 potato_protein = 0.02
 
+# curd calorie and protein content 
 curd_calorie = 0.98
 curd_protein = 0.10
 
-goat_blood_calorie = 80
+# goat blood calorie and protein content 
+goat_blood_calorie = 0.80
 goat_blood_protein = 0.21
 
 def orange(x): 
@@ -38,29 +47,56 @@ def orange_protein_fun(x):
 def chicken_breast(x): 
     return chicken_breast_calorie*x
 
+def chicken_breast_protein_fun(x):
+    return chicken_breast_protein*x 
+
 def chicken_liver(x): 
     return chicken_liver_calorie*x
+
+def chicken_liver_protein_fun(x):
+    return chicken_liver_protein*x 
 
 def sugar(x): 
     return sugar_calorie*x
 
+def sugar_protein_fun(x):
+    return sugar_protein*x 
+
 def lentils(x): 
     return lentils_calorie*x
+
+def lentils_protein_fun(x):
+    return orange_protein*x 
 
 def carrot(x): 
     return carrot_calorie*x
 
+def carrot_protein_fun(x):
+    return carrot_protein*x 
+
 def milk(x): 
     return milk_calorie*x
+
+def milk_protein_fun(x):
+    return milk_protein*x 
 
 def potato(x): 
     return potato_calorie*x
 
+def potato_protein_fun(x):
+    return potato_protein*x 
+
 def curd(x):
     return curd_calorie*x
 
+def curd_protein_fun(x):
+    return curd_protein*x 
+
 def goat_blood(x):
     return goat_blood_calorie*x
+
+def goat_blood_protein_fun(x):
+    return goat_blood_protein*x 
 
 
 print("\n############### Food Calorie and Protein Calculator!! ################### \n")
@@ -83,7 +119,7 @@ while True:
     choice = input("[1/2/3/4/5/6/7/8/9/10]: ")
 
     try: 
-        weight = float(input("Enter weight, in grams: "))
+        weight = float(input("\nEnter weight, in grams: "))
 
     except ValueError: 
         print("Input Error")
@@ -91,36 +127,36 @@ while True:
     if choice in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']: 
 
         if choice == '1': 
-            print("Total calories are: ", orange(weight), "and the protein content is, ", orange_protein_fun(weight), "g" )
+            print("Calorie: ", orange(weight), "kcal", "\nProtein:", orange_protein_fun(weight), "g" )
 
         elif choice == '2': 
-            print("Total calories are: ", chicken_breast(weight), "kcal")
+            print("Calories: ", chicken_breast(weight), "kcal", "\nProtein:", chicken_breast_protein_fun(weight), "g" )
 
         elif choice == '3': 
-            print("Total calories are: ", chicken_liver(weight), "kcal")
+            print("Calories: ", chicken_liver(weight), "kcal" "\nProtein:", chicken_liver_protein_fun(weight), "g")
 
         elif choice == '4': 
-            print("Total calories are: ", sugar(weight), "kcal")
+            print("Calories: ", sugar(weight), "kcal",  "\nProtein:", sugar_protein_fun(weight), "g")
 
         elif choice == '5': 
-            print("Total calories are: ", lentils(weight), "kcal")
+            print("Calories: ", lentils(weight), "kcal",  "\nProtein:", lentils_protein_fun(weight), "g")
 
         elif choice == '6': 
-            print("Total calories are: ", carrot(weight), "kcal")
+            print("Calories: ", carrot(weight), "kcal", "\nProtein:", carrot_protein_fun(weight), "g")
 
         elif choice == '7': 
-            print("Total calories are: ", milk(weight))
+            print("Calories: ", milk(weight), "kcal", "\nProtein:", milk_protein_fun(weight), "g")
 
         elif choice == '8': 
-            print("Total calories are: ", potato(weight))
+            print("Calories: ", potato(weight), "kcal", "\nProtein:", potato_protein_fun(weight), "g")
 
         elif choice == '9': 
-            print("Total calories are: ", curd(weight))
+            print("Calories: ", curd(weight), "kcal", "\nProtein:", curd_protein_fun(weight), "g")
 
         elif choice == '10': 
-            print("Total Calories: ", goat_blood_calorie(weight))
+            print("Calories: ", goat_blood(weight), "kcal", "\nProtein:", goat_blood_protein_fun(weight), "g")
 
-        next = input("Calculate again? [y/n]: ")
+        next = input("\nCalculate again? [y/n]: ")
         if next == "n": 
             break
 
